@@ -1,0 +1,200 @@
+<html>
+<head>
+  <title>React Resume | Juan Antonio Vivaldy Saragih</title>
+  <meta charset="UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Juan Antonio Vivaldy | Web Developer &amp; UX Enthusiast</title>
+  <link rel="shortcut icon" href="/" hreflang="en-us">
+
+  <meta property="og:title" content="React Resume | Juan Antonio Vivaldy Saragih" />
+  <meta property="og:description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta property="og:site_name" content="React Resume | Juan Antonio Vivaldy Saragih" />
+  <meta property="og:image" content="/" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="672" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:locale" content="en_US">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+  <script type="text/jsx">
+
+    var DATA = {
+      name: "Hey, I'm Juan",
+      subtext: "Developer & designer based in Medan, Indonesia",
+      jobStatus: "Frontend Developer & UI Designer",
+      instaURL: 'https://www.instagram.com/ja_atiov',
+      githubURL: 'https://github.com/JuanAntonioV',
+      linkedinURL: 'https://www.linkedin.com/in/juan-antonio-vivaldy-saragih-b54b93237/',
+      resumeURL: './img/CV.pdf'
+    }
+
+    var App = React.createClass({
+      render: function() {
+        return(
+          <div className="app">
+            <Left
+              name={this.props.profileData.name}
+              subtext={this.props.profileData.subtext}
+              jobStatus={this.props.profileData.jobStatus}
+              instaURL={this.props.profileData.instaURL}
+              githubURL={this.props.profileData.githubURL}
+              linkedinURL={this.props.profileData.linkedinURL}
+            />
+            <Right
+              intro={this.props.profileData.intro}
+              resumeURL={this.props.profileData.resumeURL}
+            />
+          </div>
+        );
+      }
+    });
+
+    var Left = React.createClass({
+      render: function() {
+        return(
+          <div className="left">
+            <div className="bg-img"></div>
+            <div className="left-inner">
+              <div className="info">
+                <h2 className="name">{this.props.name}</h2>
+                <div className="subtext">{this.props.subtext}</div>
+                <div className="jobStatus">{this.props.jobStatus}</div>
+                <div className="social-links">
+                  <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    var Right = React.createClass({
+      render: function() {
+        return(
+          <div className="right">
+            <div className="right-inner">
+              <div className="introduction">
+                <h4>Intro</h4>
+                <div className="content">
+                  <p className="intro-p">I&#39;m currently in my second year (out of four) studying information system at Mikroskil University in Medan.</p>
+                  <p className="intro-p">I enjoy being the bridge between website intregration and UI design, and feel right at home as a front end developer. I&#39;m experienced in developing and designing products for the web, from simple landing pages to web apps.</p>
+                  <span className="intro-p job-pls">I&#39;m currently looking for my next jobs for more experieces about website development before I graduated.</span>
+                </div>
+              </div>
+              <div className="skills">
+                <h4>Skills</h4>
+                <div className="content">
+                  <div className="skill-category">
+                    <strong>Languages: &nbsp;</strong>
+                    <span>JavaScript (ES6), HTML5, CSS3, C#, SQL</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                    <span>jQuery, Bootstrap, Tailwind, React, Node, Bunifu UI, Guna, Krypton</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Tools: &nbsp;</strong>
+                    <span>Git &amp; Github, Command Line, Terminal, Figma, Adobe Photoshop, Adobe Illustrator</span>
+                  </div>
+                </div>
+              </div>
+              <div className="education">
+                <h4>Education</h4>
+                <div className="content">
+                  <div className="university"><a href="http://www.mikroskil.ac.id/" target="_blank">Mikroskil University</a></div>
+                  <div className="college"><a href="http://www.ccis.northeastern.edu/" target="_blank">College of Information Technology and Information Systems</a></div>
+                  <div className="major"><strong>Major:</strong> Information System</div>
+                  <div className="conc"><strong>Concentration:</strong> Human Computer Interaction</div>
+                  <div className="study-abroad"><strong>Study Abroad:</strong> Experience taking courses from International Business Machines Corporation (IBM) from New York, United States</div>
+                  <div className="grad-date">Expected Graduation: 2024</div>
+                </div>
+              </div>
+              <div className="experience">
+                <h4>Experience</h4>
+                <div className="content">
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://tokohardware.com/" target="_blank">Tokohardware</a>
+                      <div className="duration">July 2021 &mdash; Present</div>
+                    </div>
+                    <div className="title">Web Designer & Frontend Developer</div>
+                    <ul className="description">
+                      <li>Designing a website with a UI that matches
+                        the content</li>
+                      <li>Manage the website hosting for website
+                        maintenance</li>
+                      <li>Work with a variety of different languages,
+                        platforms, frameworks, and content
+                        management systems such as HTML5, CSS3,
+                        JavaScript, Nodejs, React, and WordPress</li>
+                      <li>Manually tested sites in various browsers
+                        and mobile devices to ensure cross-browser
+                        compatibility and responsiveness</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="http://brightonid.com/" target="_blank">Brighton</a>
+                      <div className="duration">March &mdash; June 2021</div>
+                    </div>
+                    <div className="title">Design Graphic & Frontend Developer</div>
+                    <ul className="description">
+                      <li>Design content for wedding invitations,
+                        packaging and offsets</li>
+                      <li>Create and manage company website</li>
+                      <li>Create a website for wedding invitations
+                        from clients</li>
+                      <li>Designing content on social media</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="projects">
+                <h4>Projects</h4>
+                <div className="content">
+                  <div className="project-item">
+                    <div className="project-title" target="_blank">My Portfolio Website</div>
+                    <p className="project-desc">Portfolio site designed and coded from scratch to showcase my skills and past work</p>
+                  </div>
+                  <div className="project-item">
+                    <div className="project-title">Font Styled Website</div>
+                    <p className="project-desc">A Website that contains a collection of several fonts with different styles.</p>
+                  </div>
+                  <div className="project-item">
+                    <div className="project-title" target="_blank">Wedding Invitation Website</div>
+                    <p className="project-desc">A Website I built for the online wedding invitation purpose.</p>
+                  </div>
+                </div>
+              </div>
+              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <App profileData={DATA}/>,
+      document.getElementById('content')
+    );
+
+
+  </script>
+</body>
+</html>
